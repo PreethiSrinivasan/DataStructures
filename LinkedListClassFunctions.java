@@ -1,6 +1,8 @@
 public class LinkedListClassFunctions
 {
     private Node head;
+
+    //insert at head
     public void insertAtHead(int data)
     {
           Node newNode=new Node(data);
@@ -8,6 +10,26 @@ public class LinkedListClassFunctions
           this.head=newNode;
     }
 
+    //length of linkedlist
+    public int lengthLinkedList()
+    {
+        int length=0;
+        Node current=this.head;
+        while(current!=null)
+        {
+            current=current.getnextNode();
+            length++;
+        }
+        return length;
+    }
+
+    //deleting a node from head
+
+    public void deleteNodeAtHead()
+    {
+        this.head=this.head.getnextNode();
+
+    }
 
     public static void main(String[] args)
     {
@@ -16,6 +38,8 @@ public class LinkedListClassFunctions
         list.insertAtHead(20);
         list.insertAtHead(30);
         System.out.println(list);
+        System.out.println("length of the linkedlist is:" + list.lengthLinkedList());
+        System.out.println(list.deleteNodeAtHead);
     }
 
     @Override

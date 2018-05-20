@@ -24,4 +24,10 @@ public class Node
     {
         this.nextNode=nextNode;
     }
+
+    @Override
+    public String toString()
+    {
+        return "Data:" +this.data;
+    }
 }
