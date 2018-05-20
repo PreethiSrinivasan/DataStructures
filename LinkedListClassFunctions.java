@@ -31,6 +31,21 @@ public class LinkedListClassFunctions
 
     }
 
+    //searching an item in linkedlist
+    public Node searchItem(int data)
+    {
+        Node current=this.head;
+        while(current!=null)
+        {
+            if(current.getData()==data)
+            {
+                return current;
+            }
+            current=current.getnextNode();
+        }
+        return null;
+    }
+
     public static void main(String[] args)
     {
         LinkedListClassFunctions list=new LinkedListClassFunctions();
@@ -40,6 +55,7 @@ public class LinkedListClassFunctions
         System.out.println(list);
         System.out.println("length of the linkedlist is:" + list.lengthLinkedList());
         System.out.println(list.deleteNodeAtHead);
+        System.out.println("Data found:" +list.searchItem(10));
     }
 
     @Override
